@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sortformer-onnx"
+version = "0.1.0"
+description = "Python implementation of NVIDIA Sortformer v2 Streaming Speaker Diarization"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["numpy>=1.21.6", "huggingface-hub"]
+
+[project.optional-dependencies]
+cli = ["librosa>=0.9.1"]
+cpu = ["onnxruntime>=1.18.1"]
+gpu = ["onnxruntime-gpu>=1.18.1"]
+
+[project.scripts]
+sortformer-cli = "sortformer_cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/mefich/sortformer-python"
