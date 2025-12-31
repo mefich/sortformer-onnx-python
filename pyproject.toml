@@ -24,4 +24,4 @@ gpu = ["onnxruntime-gpu>=1.18.1"]
 sortformer-cli = "sortformer_cli:main"
 
 [project.urls]
-"Homepage" = "https://github.com/mefich/sortformer-python"
+"Homepage" = "https://github.com/mefich/sortformer-onnx-python"
